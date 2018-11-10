@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bulma.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
     <link href="images/favicon.png" rel="shortcut icon" type="image/png">
   </head>
   <body>
@@ -30,52 +31,22 @@
   <div class="columns">
     <aside class="column is-2">
         <ul class="menu-list">
-          <li><a>System Reports</a></li>
-          <li><a>Dashboard</a></li>
-          <li><a>Costs</a></li>
+          <li><a>Data</a></li>
+          <li><a>Analytics</a></li>
+          <li><a>Energy Management</a></li>
+          <li><a>Reports</a></li>
         </ul>
     </aside>
 
     <main class="column">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <div class="title">Dashboard</div>
+      <div class="columns is-multiline">
+          <div class="column is-4 has-background-warning">
+            <div class="subtitle">Welcome back!</div>
+            <div class="title has-text-danger">56,950 Spikes detected!</div>
+            <h1 class="regular" style="margin-top:-1em">since your last visit.  View reports<a href="#" class="regular has-text-danger"> here</a>.</h1>
           </div>
-        </div>
-        <div class="level-right">
-          <div class="level-item">
-            <button type="button" class="button is-small">
-              March 8, 2017 - April 6, 2017
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-          <div class="column is-full">
-            <div class="heading has-text-centered">Top Seller Total</div>
-            <div class="title has-text-centered">56,950</div>
-            <div class="level">
-              <div class="level-item">
-                <div class="">
-                  <div class="heading">Sales $</div>
-                  <div class="title is-5">250,000</div>
-                </div>
-              </div>
-              <div class="level-item">
-                <div class="">
-                  <div class="heading">Overall $</div>
-                  <div class="title is-5">750,000</div>
-                </div>
-              </div>
-              <div class="level-item">
-                <div class="">
-                  <div class="heading">Sales %</div>
-                  <div class="title is-5">25%</div>
-                </div>
-              </div>
-            </div>
+          <div class="column is-8 has-background-success">
+            <div class="title has-text-grey-darker is-horizonral-centered" style="margin-top:.9em">*INSERT SOMETHING*</div>
           </div>
       </div>
 
@@ -83,48 +54,48 @@
         <div class="column is-6">
           <div class="panel">
             <p class="panel-heading">
-              Expenses: Daily - $700
+              Current
             </p>
-            <div class="panel-block">
-              <figure class="image is-16x9">
-                <img src="https://placehold.it/1280x720">
-              </figure>
+            <div class="panel-block is-16x9">
+              <div style="width: 100%;">
+                  <canvas id="Current"></canvas>
+              </div>
             </div>
           </div>
         </div>
         <div class="column is-6">
           <div class="panel">
             <p class="panel-heading">
-              Refunds: Daily - $200
+              Voltage
             </p>
-            <div class="panel-block">
-              <figure class="image is-16x9">
-                <img src="https://placehold.it/1280x720">
-              </figure>
+            <div class="panel-block is-16x9">
+              <div style="width: 100%;">
+                  <canvas id="Voltage"></canvas>
+              </div>
             </div>
           </div>
         </div>
         <div class="column is-6">
           <div class="panel">
             <p class="panel-heading">
-              Something
+              Power
             </p>
-            <div class="panel-block">
-              <figure class="image is-16x9">
-                <img src="https://placehold.it/1280x720">
-              </figure>
+            <div class="panel-block is-16x9">
+              <div style="width: 100%;">
+                  <canvas id="Power"></canvas>
+              </div>
             </div>
           </div>
         </div>
         <div class="column is-6">
           <div class="panel">
             <p class="panel-heading">
-              Something Else
+              Projected Electricity Cost
             </p>
-            <div class="panel-block">
-              <figure class="image is-16x9">
-                <img src="https://placehold.it/1280x720">
-              </figure>
+            <div class="panel-block is-16x9">
+              <div style="width: 100%;">
+                  <canvas id="Cost"></canvas>
+              </div>
             </div>
           </div>
         </div>
@@ -132,3 +103,8 @@
     </main>
   </div>
 </div>
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
