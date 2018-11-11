@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VISIV | Dashboard</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bulma.css"/>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+
+  <!--Dashboard Header-->
+  <nav id="navbar" class="navbar has-shadow is-spaced">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://www.facebook.com/visivuplb/">
+          <img src="images/visiv-logo.svg" alt="VISIV | Smart Energy" width="170" height="75">
+        </a>
+      </div>
+    </div>
+    <p class="control" style="margin-top: .5em; margin-right:2.5em">
+      <a class="button is-primary is-rounded" style = "background-color:#34c92f" href="./index.html">
+      <strong>Log Out</strong>
+      </a>
+    </p>
+</nav>
+
+<div class="section" style="margin-top: -1em">
+  <div class="columns">
+    <aside class="column is-2">
+        <ul class="menu-list">
+          <li><a>Home</a></li>
+          <li><a>Devices</a></li>
+          <li><a href=./costs.html>Bill Breakdown</a></li>
+          <li><a>Maintenance & Repairs </a></li>
+        </ul>
+    </aside>
+
+    <main class="column">
+          <div class="column is-full box has-background-warning has-text-centered">
+              <div class="subtitle extrabold is-centered has-text-grey-darker">Welcome back!</div>
+              <div class="columns is-multiline is-centered" style="padding-top:-.1em; padding-bottom:-.5em;">
+                <div class="column semibold is-2" style="margin-left:5em;margin-right:5em"><h1 class="title extrabold has-text-danger" id="surge">X</h1> power surges</div>
+                <div class="column semibold is-2" style="margin-left:5em;margin-right:5em"><h1 class="title extrabold has-text-danger" id="devices">X KWH</h1 id="device_text"> of power consumed</div>
+                <div class="column semibold is-2" style="margin-left:5em;margin-right:5em"><h1 class="title extrabold has-text-danger" >X PhP</h1> estimated electricity bill for this month</div>
+              </div>
+              <h1 class="semibold" style="margin-top:.5em;font-size:1.1em">View reports<a href="#" class="semibold   has-text-danger"> here</a>.</h1>
+          </div>
+
+          <div class="column is-full box"style="margin-top:1em">
+            <div id="power"></div>
+          </div>
+
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <div class="panel">
+            <div class="panel-block box is-16x9">
+                <div id="current" style="width:100%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="panel">
+            <div class="panel-block box is-16x9">
+              <div id="voltage" style="width:100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
